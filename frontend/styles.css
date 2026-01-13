@@ -1,0 +1,29 @@
+#container {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+svg {
+  width: 800px;
+  height: 500px;
+}
+
+#sidebar {
+  width: 300px;
+  padding: 16px;
+  border-right: 1px solid #ddd;
+}
+
+#sidebar h3 {
+  margin-top: 0;
+}
+
+button {
+  float: right;
+  cursor: pointer;
+  border: none;
+  background: #2f6f6f;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
