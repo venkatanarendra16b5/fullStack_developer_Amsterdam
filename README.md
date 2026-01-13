@@ -35,24 +35,27 @@ The backend transforms flat graph data into a hierarchical structure, and the fr
 
 ## 📂 Project Structure
 
-.
-- ├── backend/
-- │ ├── src/
-- │ │ ├── data/graphData.json
-- │ │ ├── utils/buildTree.js
-- │ │ ├── routes/tree.routes.js
-- │ │ ├── app.js
-- │ │ └── server.js
-- │ ├── package.json
-- │
-- ├── frontend/
-- │ ├── index.html
-- │ ├── App.js
-- │ └── styles.css
-- │
-- └── README.md
-
-
+```text
+fullStack_developer_Amsterdam/
+├── backend/
+│   ├── src/
+│   │   ├── data/
+│   │   │   └── graphData.json
+│   │   ├── utils/
+│   │   │   └── buildTree.js
+│   │   ├── routes/
+│   │   │   └── tree.routes.js
+│   │   ├── app.js
+│   │   └── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── index.html
+│   ├── App.js
+│   └── styles.css
+│
+└── README.md
+```
 ## ▶️ How to Run the Application Locally
 
 ### 1️⃣ Run the Backend
@@ -77,43 +80,42 @@ The backend transforms flat graph data into a hierarchical structure, and the fr
 - Click the ❌ button in the details panel to deselect the node
 
 ### 📡 API Response Format
-- json
-- {
--  "success": true,
--  "data": [
--    {
--      "name": "A",
--      "description": "This is the description of A",
--      "children": []
--    }
--  ]
-- }
+json
+ {
+  "success": true,
+  "data": [
+    {
+      "name": "A",
+      "description": "This is the description of A",
+      "children": []
+    }
+  ]
+ }
 
 ### 🧠 Design Decisions
-- =>Flat data structure is used as input for simplicity and scalability
-- =>Tree is constructed using a Map to ensure O(n) time complexity
-- =>D3.js handles SVG rendering and layout calculations
-- =>Vue 3 manages application state and user interactions
-- =>Backend and frontend are fully decoupled
+- Flat data structure is used as input for simplicity and scalability
+- Tree is constructed using a Map to ensure O(n) time complexity
+- D3.js handles SVG rendering and layout calculations
+- Vue 3 manages application state and user interactions
+- Backend and frontend are fully decoupled
 
 ### ⚡ Performance Considerations
-- =>Tree construction runs in linear time
-- =>Single API call for fetching data
-- =>Stateless backend
-- =>D3 optimizes DOM updates for complex visualizations
+- Tree construction runs in linear time
+- Single API call for fetching data
+- Stateless backend
+- D3 optimizes DOM updates for complex visualizations
 
 ### 🚨 Edge Cases Handled
-- =>Missing parent nodes are treated as root nodes
-- =>Empty dataset returns an empty tree
-- =>Duplicate node names handled safely
-- =>Node deselection supported
+- Missing parent nodes are treated as root nodes
+- Empty dataset returns an empty tree
+- Duplicate node names handled safely
+- Node deselection supported
 
 ### 🔮 Possible Improvements
-- =>Persist data using a graph database (e.g., Neo4j)
-- =>Add unit test coverage
-- =>Support very large graphs using lazy loading
-- =>Deploy backend and frontend to cloud infrastructure
+- Persist data using a graph database (e.g., Neo4j)
+- Add unit test coverage
+- Support very large graphs using lazy loading
+- Deploy backend and frontend to cloud infrastructure
 
 ### 👤 Author
-- Nallabothula Venkata Narendra
-- Full Stack Developer
+- Nallabothula Venkata Narendra - Full Stack Developer
